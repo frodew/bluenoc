@@ -19,20 +19,10 @@ modules:
         # compositor
         - niri
         - xwayland-satellite
-        # shell + runtime deps
+        # shell
         - noctalia-shell
-        - brightnessctl
-        - qt6-qtmultimedia
-        # clipboard
-        - cliphist
         # terminal
         - kitty
-        # auth agent
-        - lxqt-policykit
-        # screenshot
-        - grim
-        # night light
-        - wlsunset
         # nautilus extensions
         - nautilus-python
     remove:
