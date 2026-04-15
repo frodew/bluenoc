@@ -18,51 +18,28 @@ modules:
       packages:
         # compositor
         - niri
-        - xdg-desktop-portal-gtk
         - xwayland-satellite
         # shell + runtime deps
         - noctalia-shell
         - brightnessctl
-        - ImageMagick
-        - ffmpeg
-        - python3
         - qt6-qtmultimedia
         # clipboard
-        - wl-clipboard
         - cliphist
         # terminal
         - kitty
         # auth agent
-        - plasma-polkit-agent
+        - polkit-gnome
         # screenshot
         - grim
-        # night light + power
+        # night light
         - wlsunset
-        - power-profiles-daemon
         # nautilus extensions
         - nautilus-python
     remove:
       packages:
         - gnome-software
-        - gnome-software-rpm-ostree
         - gnome-tour
-        - gnome-maps
-        - gnome-weather
-        - gnome-contacts
-        - gnome-calendar
-        - gnome-clocks
-        - gnome-connections
-        - gnome-characters
-        - gnome-calculator
-        - gnome-text-editor
         - gnome-system-monitor
-        - gnome-logs
-        - baobab
-        - file-roller
-        - totem
-        - rhythmbox
-        - evince
-        - loupe
         - gnome-classic-session
         - gnome-initial-setup
         - firefox
