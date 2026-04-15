@@ -13,7 +13,7 @@ modules:
   - type: dnf
     repos:
       files:
-        - https://repos.fyralabs.com/terra43/terra.repo
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
       packages:
         # compositor
