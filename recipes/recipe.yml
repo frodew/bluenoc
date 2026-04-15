@@ -1,6 +1,6 @@
 ---
 name: bluenoc
-description: Immutable Fedora Silverblue with Niri and Noctalia
+description: Fedora Silverblue with Niri and Noctalia
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 43
 
@@ -12,26 +12,34 @@ modules:
 
   - type: dnf
     repos:
-      copr: []
-      urls:
+      files:
         - https://repos.fyralabs.com/terra43/terra.repo
     install:
       packages:
+        # compositor
         - niri
         - xdg-desktop-portal-gtk
         - xwayland-satellite
+        # shell + runtime deps
         - noctalia-shell
         - brightnessctl
         - ImageMagick
+        - ffmpeg
         - python3
         - qt6-qtmultimedia
+        # clipboard
         - wl-clipboard
         - cliphist
+        # terminal
         - kitty
+        # auth agent
         - plasma-polkit-agent
+        # screenshot
         - grim
+        # night light + power
         - wlsunset
         - power-profiles-daemon
+        # nautilus extensions
         - nautilus-python
     remove:
       packages:
