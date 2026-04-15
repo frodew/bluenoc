@@ -28,7 +28,7 @@ modules:
         # terminal
         - kitty
         # auth agent
-        - polkit-gnome
+        - lxqt-policykit
         # screenshot
         - grim
         # night light
