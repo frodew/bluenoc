@@ -1,6 +1,6 @@
 [Unit]
-Description=Brew upgrade
+Description=Topgrade
 
 [Service]
 Type=oneshot
-ExecStart=/home/linuxbrew/.linuxbrew/bin/brew upgrade
+ExecStart=/home/linuxbrew/.linuxbrew/bin/topgrade --yes --cleanup
