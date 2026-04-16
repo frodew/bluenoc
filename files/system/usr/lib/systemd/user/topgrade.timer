@@ -1,5 +1,5 @@
 [Unit]
-Description=Weekly brew upgrade
+Description=Weekly topgrade
 
 [Timer]
 OnCalendar=weekly
