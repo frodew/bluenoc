@@ -10,6 +10,10 @@ modules:
       - source: system
         destination: /
 
+  - type: script
+    snippets:
+      - "systemctl --global enable brew-upgrade.timer"
+
   - type: dnf
     repos:
       files:
@@ -35,6 +39,9 @@ modules:
         - firefox
         - firefox-langpacks
         - ptyxis
+
+  - type: brew
+    brew-analytics: false
 
   - type: default-flatpaks
     configurations:
