@@ -1,0 +1,6 @@
+[Unit]
+Description=Brew upgrade
+
+[Service]
+Type=oneshot
+ExecStart=/home/linuxbrew/.linuxbrew/bin/brew upgrade
