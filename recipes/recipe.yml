@@ -36,9 +36,23 @@ modules:
         - gnome-system-monitor
         - gnome-classic-session
         - gnome-initial-setup
+        - gnome-user-docs
+        - gnome-user-share
+        - gnome-remote-desktop
+        - yelp
+        - yelp-libs
+        - yelp-xsl
+        - malcontent
+        - malcontent-control
         - firefox
         - firefox-langpacks
         - ptyxis
+        - alacritty
+        - nvtop
+        - nano
+        - b43-fwcutter
+        - b43-openfwwf
+        - brcmfmac-firmware
 
   - type: brew
     brew-analytics: false
