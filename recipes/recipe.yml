@@ -29,6 +29,9 @@ modules:
         - kitty
         # nautilus extensions
         - nautilus-python
+        # other
+        - keyd
+        - wl-mirror
     remove:
       packages:
         - gnome-software
