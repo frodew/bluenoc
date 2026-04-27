@@ -59,12 +59,4 @@ modules:
   - type: brew
     brew-analytics: false
 
-  - type: default-flatpaks
-    configurations:
-      - scope: system
-        install:
-          - io.github.kolunmi.Bazaar
-          - com.github.tchx84.Flatseal
-          - io.github.flattool.Warehouse
-
   - type: signing
