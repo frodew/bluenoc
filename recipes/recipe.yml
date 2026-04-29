@@ -33,7 +33,7 @@ modules:
         - evolution-data-server
         # displaylink
         - displaylink
-        - kmod-evdi
+        - libevdi
     remove:
       packages:
         - gnome-software
