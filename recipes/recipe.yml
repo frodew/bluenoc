@@ -31,6 +31,7 @@ modules:
         - keyd
         - wl-mirror
         - evolution-data-server
+        - kmod-evdi
     remove:
       packages:
         - gnome-software
