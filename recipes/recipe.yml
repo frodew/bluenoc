@@ -27,8 +27,6 @@ modules:
         - noctalia-shell
         # terminal
         - kitty
-        # nautilus extensions
-        - nautilus-python
         # other
         - keyd
         - wl-mirror
