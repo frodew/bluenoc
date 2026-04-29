@@ -31,9 +31,6 @@ modules:
         - keyd
         - wl-mirror
         - evolution-data-server
-        # displaylink
-        - displaylink
-        - libevdi
     remove:
       packages:
         - gnome-software
@@ -56,6 +53,14 @@ modules:
         - b43-fwcutter
         - b43-openfwwf
         - brcmfmac-firmware
+
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/akmods-extra:main-43 /rpms/ /tmp/rpms
+      - RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods-addons*.rpm &&
+          rpm-ostree install /tmp/rpms/kmods/kmod-evdi*.rpm &&
+          rpm-ostree install displaylink &&
+          rpm-ostree cleanup -m
 
   - type: brew
     brew-analytics: false
