@@ -31,6 +31,7 @@ modules:
         - keyd
         - wl-mirror
         - evolution-data-server
+        - displaylink
     remove:
       packages:
         - gnome-software
@@ -53,10 +54,6 @@ modules:
         - b43-fwcutter
         - b43-openfwwf
         - brcmfmac-firmware
-
-  - type: containerfile
-    snippets:
-      - RUN dnf install -y --setopt=tsflags=noscripts displaylink kmod-evdi && dnf clean all
 
   - type: brew
     brew-analytics: false
