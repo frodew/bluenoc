@@ -14,15 +14,11 @@ modules:
     snippets:
       - "systemctl --global enable topgrade.timer"
 
-  - type: akmods
-    base: extra
-    install:
-      - evdi
-
   - type: dnf
     repos:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+        - https://negativo17.org/repos/fedora-multimedia.repo
     install:
       packages:
         # compositor
@@ -40,7 +36,7 @@ modules:
         - evolution-data-server
         # displaylink
         - displaylink
-        - ublue-os-akmods-addons
+        - kmod-evdi
     remove:
       packages:
         - gnome-software
