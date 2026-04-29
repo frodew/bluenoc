@@ -14,6 +14,11 @@ modules:
     snippets:
       - "systemctl --global enable topgrade.timer"
 
+  - type: akmods
+    base: main
+    install:
+      - evdi
+
   - type: dnf
     repos:
       files:
@@ -33,6 +38,9 @@ modules:
         - keyd
         - wl-mirror
         - evolution-data-server
+        # displaylink
+        - displaylink
+        - ublue-os-akmods-addons
     remove:
       packages:
         - gnome-software
