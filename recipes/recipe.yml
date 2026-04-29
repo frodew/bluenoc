@@ -15,7 +15,7 @@ modules:
       - "systemctl --global enable topgrade.timer"
 
   - type: akmods
-    base: main
+    base: extra
     install:
       - evdi
 
