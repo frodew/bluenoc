@@ -56,7 +56,7 @@ modules:
 
   - type: containerfile
     snippets:
-      - RUN rpm-ostree install --idempotent --setopt=tsflags=noscripts displaylink kmod-evdi && rpm-ostree cleanup -m
+      - RUN dnf install -y --setopt=tsflags=noscripts displaylink kmod-evdi && dnf clean all
 
   - type: brew
     brew-analytics: false
