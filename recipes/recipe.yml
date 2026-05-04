@@ -30,6 +30,7 @@ modules:
         # other
         - keyd
         - wl-mirror
+        - network-manager-applet
     remove:
       packages:
         - gnome-software
