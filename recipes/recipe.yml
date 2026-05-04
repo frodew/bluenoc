@@ -31,6 +31,9 @@ modules:
         - keyd
         - wl-mirror
         - evolution-data-server
+        - NetworkManager-openconnect
+        - NetworkManager-openconnect-gnome
+        - systemctl
     remove:
       packages:
         - gnome-software
