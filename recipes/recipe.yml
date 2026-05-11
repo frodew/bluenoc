@@ -31,6 +31,7 @@ modules:
         - keyd
         - wl-mirror
         - network-manager-applet
+        - wtype
     remove:
       packages:
         - gnome-software
