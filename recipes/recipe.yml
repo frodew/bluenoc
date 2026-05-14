@@ -57,12 +57,7 @@ modules:
 
   - type: containerfile
     snippets:
-      - RUN dnf install -y akmod-evdi kernel-devel &&
-            export CFLAGS="-fno-pie -no-pie" &&
-            akmods --force --kernels $(rpm -q kernel-devel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}') --kmod evdi &&
-            dnf install -y --setopt=tsflags=noscripts displaylink libevdi &&
-            dnf clean all &&
-            unset CFLAGS
+      - RUN dnf install -y --setopt=tsflags=noscripts displaylink && dnf clean all
 
   - type: script
     snippets:
