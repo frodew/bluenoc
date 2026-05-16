@@ -29,6 +29,7 @@ modules:
         - kitty
         # other
         - keyd
+        - kanata
         - wl-mirror
         - network-manager-applet
         - wtype
