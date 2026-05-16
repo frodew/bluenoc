@@ -71,6 +71,10 @@ modules:
         mv "/usr/lib/quarto-${QUARTO_VER}" /usr/lib/quarto
         ln -sf /usr/lib/quarto/bin/quarto /usr/bin/quarto
 
+  - type: script
+    scripts:
+      - setup-kanata.sh
+
   - type: brew
     brew-analytics: false
 
