@@ -18,6 +18,7 @@ modules:
     repos:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+        - https://pkg.claude-desktop-debian.dev/rpm/claude-desktop.repo
     install:
       packages:
         # compositor
@@ -32,6 +33,7 @@ modules:
         - wl-mirror
         - network-manager-applet
         - wtype
+        - claude-desktop
     remove:
       packages:
         - gnome-software
