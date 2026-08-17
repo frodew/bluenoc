@@ -60,6 +60,15 @@ modules:
   - type: containerfile
     snippets:
       - RUN dnf install -y --setopt=tsflags=noscripts displaylink && dnf clean all
+      # Build the evdi kmod against whatever kernel the image ships, and bake it in
+      - |
+        RUN KVER="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}' kernel-core | tail -n1)" && \
+            dnf install -y "kernel-devel-${KVER}" akmod-evdi && \
+            akmods --force --kernels "${KVER}" --kmod evdi && \
+            dnf install -y /var/cache/akmods/evdi/kmod-evdi-*.rpm && \
+            depmod -a "${KVER}" && \
+            dnf remove -y "kernel-devel-${KVER}" && \
+            dnf clean all && rm -rf /var/cache/akmods/*
 
   - type: brew
     brew-analytics: false
