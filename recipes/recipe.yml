@@ -15,10 +15,10 @@ modules:
       - "systemctl --global enable topgrade.timer"
 
   - type: dnf
-    repos:
-      files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-        - https://pkg.claude-desktop-debian.dev/rpm/claude-desktop.repo
+      repos:
+        files:
+          - https://raw.githubusercontent.com/terrapkg/subatomic-repos/main/terra.repo
+          - https://pkg.claude-desktop-debian.dev/rpm/claude-desktop.repo
     install:
       packages:
         # compositor
