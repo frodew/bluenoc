@@ -1,8 +1,8 @@
 [Unit]
-Description=Monthly topgrade
+Description=Weekly topgrade
 
 [Timer]
-OnCalendar=monthly
+OnCalendar=weekly
 Persistent=true
 
 [Install]
