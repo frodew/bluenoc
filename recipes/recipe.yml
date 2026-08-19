@@ -69,7 +69,12 @@ modules:
             depmod -a "${KVER}" && \
             dnf remove -y "kernel-devel-${KVER}" && \
             dnf clean all && rm -rf /var/cache/akmods/*
-
+  
+  - type: systemd
+    system:
+      enabled:
+        - displaylink.service
+        
   - type: brew
     brew-analytics: false
 
