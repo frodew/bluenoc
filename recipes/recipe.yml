@@ -59,7 +59,7 @@ modules:
   - type: containerfile
     snippets:
       - RUN dnf install -y --setopt=tsflags=noscripts displaylink && dnf clean all
-            - |
+      - |
         RUN KVER="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}' kernel-core | tail -n1)" && \
             dnf install -y "kernel-devel-${KVER}" akmod-evdi && \
             akmods --force --kernels "${KVER}" --kmod evdi && \
