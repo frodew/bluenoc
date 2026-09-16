@@ -27,6 +27,8 @@ modules:
         - noctalia
         # terminal
         - kitty
+        # backup
+        - restic
         # other
         - wl-mirror
         - network-manager-applet
