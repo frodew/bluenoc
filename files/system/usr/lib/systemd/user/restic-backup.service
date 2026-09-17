@@ -1,0 +1,16 @@
+[Unit]
+Description=Restic backup of home to netcup
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+Environment=RESTIC_REPOSITORY=sftp:netcup-backup:restic-bluenoc
+Environment=RESTIC_PASSWORD_FILE=%h/.config/restic/password
+ExecStart=/usr/bin/restic backup %h --exclude-file=%h/.config/restic/excludes --exclude-caches --one-file-system
+ExecStartPost=/usr/bin/restic forget --keep-weekly 8 --keep-monthly 6 --prune
+SuccessExitStatus=3
+Restart=on-failure
+RestartSec=30min
+Nice=19
+IOSchedulingClass=idle
