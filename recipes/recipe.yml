@@ -10,10 +10,6 @@ modules:
       - source: system
         destination: /
 
-  - type: script
-    snippets:
-      - "systemctl --global enable topgrade.timer"
-
   - type: dnf
     repos:
       files:
@@ -75,6 +71,10 @@ modules:
     system:
       enabled:
         - displaylink.service
+    user:
+      enabled:
+        - topgrade.timer
+        - restic-backup.timer
         
   - type: brew
     brew-analytics: false
